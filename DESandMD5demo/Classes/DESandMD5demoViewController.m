@@ -7,8 +7,11 @@
 //
 
 #import "DESandMD5demoViewController.h"
+#import "Utility.h"
 
 @implementation DESandMD5demoViewController
+@synthesize txtKey;
+@synthesize lblKey;
 @synthesize selectControl;
 @synthesize txtType;
 @synthesize txtOutputView;
@@ -30,20 +33,25 @@
     if (sender.selectedSegmentIndex == 0)
     {
         isMD5Mode = YES;
-        btnDecrypt.enabled = NO;
         btnDecrypt.hidden = YES;
+        lblKey.hidden = YES;
+        txtKey.hidden = YES;
     }
     else
     {
         isMD5Mode = NO;
-        btnDecrypt.enabled = YES;
         btnDecrypt.hidden = NO;
+        lblKey.hidden = NO;
+        txtKey.hidden = NO;
     }
 }
 
 - (IBAction)doEncrypt:(id)sender 
 {
-    
+    if (isMD5Mode)
+    {
+        txtOutputView.text = [Utility md5:txtType.text];
+    }
 }
 
 - (IBAction)doDecrypt:(id)sender 
@@ -58,6 +66,8 @@
     [self setTxtOutputView:nil];
     [self setBtnEncrypt:nil];
     [self setBtnDecrypt:nil];
+    [self setTxtKey:nil];
+    [self setLblKey:nil];
     [super viewDidUnload];
 }
 
@@ -68,6 +78,8 @@
     [txtOutputView release];
     [btnEncrypt release];
     [btnDecrypt release];
+    [txtKey release];
+    [lblKey release];
     [super dealloc];
 }
 
@@ -79,10 +91,12 @@
     if ([string isEqualToString:@"\n"])
     {
         [textField resignFirstResponder];
-        NSLog(@"textFieldDidEndEditing");
-        return YES;
+        
+        if (textField.text && textField.tag != 1)
+            [self doEncrypt:btnEncrypt];
     }
-    return NO;
+    
+    return YES;
 }
 
 @end

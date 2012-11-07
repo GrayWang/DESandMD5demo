@@ -20,5 +20,7 @@
 @property (retain, nonatomic) IBOutlet UIButton *btnDecrypt;
 
 - (IBAction)selectControl:(UISegmentedControl *)sender;
+@property (retain, nonatomic) IBOutlet UITextField *txtKey;
+@property (retain, nonatomic) IBOutlet UILabel *lblKey;
 @end
 
