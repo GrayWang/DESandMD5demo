@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DESandMD5demoViewController : UIViewController 
+@interface DESandMD5demoViewController : UIViewController <UITextFieldDelegate>
 {
+    BOOL isMD5Mode;
 }
 
 @property (retain, nonatomic) IBOutlet UISegmentedControl *selectControl;
@@ -17,5 +18,7 @@
 @property (retain, nonatomic) IBOutlet UITextView *txtOutputView;
 @property (retain, nonatomic) IBOutlet UIButton *btnEncrypt;
 @property (retain, nonatomic) IBOutlet UIButton *btnDecrypt;
+
+- (IBAction)selectControl:(UISegmentedControl *)sender;
 @end
 

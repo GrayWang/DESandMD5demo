@@ -22,11 +22,47 @@
 {
     [super viewDidLoad];
 	
-	
+	isMD5Mode = YES;
 }
 
+- (IBAction)selectControl:(UISegmentedControl *)sender
+{
+    if (sender.selectedSegmentIndex == 0)
+    {
+        isMD5Mode = YES;
+        btnDecrypt.enabled = NO;
+        btnDecrypt.hidden = YES;
+    }
+    else
+    {
+        isMD5Mode = NO;
+        btnDecrypt.enabled = YES;
+        btnDecrypt.hidden = NO;
+    }
+}
 
-- (void)dealloc {
+- (IBAction)doEncrypt:(id)sender 
+{
+    
+}
+
+- (IBAction)doDecrypt:(id)sender 
+{
+    
+}
+
+- (void)viewDidUnload 
+{
+    [self setSelectControl:nil];
+    [self setTxtType:nil];
+    [self setTxtOutputView:nil];
+    [self setBtnEncrypt:nil];
+    [self setBtnDecrypt:nil];
+    [super viewDidUnload];
+}
+
+- (void)dealloc 
+{
     [selectControl release];
     [txtType release];
     [txtOutputView release];
@@ -35,12 +71,18 @@
     [super dealloc];
 }
 
-- (void)viewDidUnload {
-    [self setSelectControl:nil];
-    [self setTxtType:nil];
-    [self setTxtOutputView:nil];
-    [self setBtnEncrypt:nil];
-    [self setBtnDecrypt:nil];
-    [super viewDidUnload];
+
+#pragma mark -
+#pragma mark textfield delegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
+{
+    if ([string isEqualToString:@"\n"])
+    {
+        [textField resignFirstResponder];
+        NSLog(@"textFieldDidEndEditing");
+        return YES;
+    }
+    return NO;
 }
+
 @end
