@@ -66,7 +66,7 @@
 						</object>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">12</float>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="645425669">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="20633150">
 							<string key="name">Helvetica</string>
 							<string key="family">Helvetica</string>
 							<int key="traits">0</int>
@@ -95,7 +95,7 @@
 						<reference key="IBUIHighlightedColor" ref="424807720"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">12</float>
-						<reference key="IBUIFontDescription" ref="645425669"/>
+						<reference key="IBUIFontDescription" ref="20633150"/>
 						<reference key="IBUIFont" ref="305299542"/>
 					</object>
 					<object class="IBUIButton" id="745355569">
@@ -120,7 +120,7 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="367670218">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="380301312">
 							<string key="name">Helvetica-Bold</string>
 							<string key="family">Helvetica</string>
 							<int key="traits">2</int>
@@ -134,7 +134,7 @@
 					</object>
 					<object class="IBUIButton" id="158612452">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{20, 403}, {280, 37}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
@@ -151,7 +151,7 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="687023542"/>
-						<reference key="IBUIFontDescription" ref="367670218"/>
+						<reference key="IBUIFontDescription" ref="380301312"/>
 						<reference key="IBUIFont" ref="885475335"/>
 					</object>
 					<object class="IBUITextField" id="986365692">
@@ -160,7 +160,7 @@
 						<string key="NSFrame">{{20, 120}, {280, 31}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="385704953"/>
+						<reference key="NSNextKeyView" ref="704609584"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -258,9 +258,9 @@
 							<reference ref="4"/>
 						</object>
 					</object>
-					<object class="IBUILabel" id="385704953">
+					<object class="IBUILabel" id="704609584">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{20, 171}, {62, 26}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
@@ -275,12 +275,12 @@
 						<reference key="IBUIHighlightedColor" ref="424807720"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">12</float>
-						<reference key="IBUIFontDescription" ref="645425669"/>
+						<reference key="IBUIFontDescription" ref="20633150"/>
 						<reference key="IBUIFont" ref="305299542"/>
 					</object>
-					<object class="IBUITextField" id="1046548889">
+					<object class="IBUITextField" id="453427714">
 						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">292</int>
+						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{79, 170}, {221, 31}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
@@ -382,7 +382,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">txtKey</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1046548889"/>
+						<reference key="destination" ref="453427714"/>
 					</object>
 					<int key="connectionID">28</int>
 				</object>
@@ -390,7 +390,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">lblKey</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="385704953"/>
+						<reference key="destination" ref="704609584"/>
 					</object>
 					<int key="connectionID">30</int>
 				</object>
@@ -432,7 +432,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="1046548889"/>
+						<reference key="source" ref="453427714"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">29</int>
@@ -472,8 +472,8 @@
 							<reference ref="158612452"/>
 							<reference ref="745355569"/>
 							<reference ref="817460652"/>
-							<reference ref="385704953"/>
-							<reference ref="1046548889"/>
+							<reference ref="704609584"/>
+							<reference ref="453427714"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -514,12 +514,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">26</int>
-						<reference key="object" ref="385704953"/>
+						<reference key="object" ref="704609584"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">27</int>
-						<reference key="object" ref="1046548889"/>
+						<reference key="object" ref="453427714"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</object>

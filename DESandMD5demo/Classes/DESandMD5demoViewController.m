@@ -52,11 +52,15 @@
     {
         txtOutputView.text = [Utility md5:txtType.text];
     }
+    else
+    {
+        txtOutputView.text = [Utility encryptStr:txtType.text key:txtKey.text];
+    }
 }
 
 - (IBAction)doDecrypt:(id)sender 
 {
-    
+    txtOutputView.text = [Utility decryptStr:txtType.text key:txtKey.text];
 }
 
 - (void)viewDidUnload 
@@ -92,7 +96,7 @@
     {
         [textField resignFirstResponder];
         
-        if (textField.text && textField.tag != 1)
+        if (textField.text && textField.tag != 1 && isMD5Mode)
             [self doEncrypt:btnEncrypt];
     }
     
