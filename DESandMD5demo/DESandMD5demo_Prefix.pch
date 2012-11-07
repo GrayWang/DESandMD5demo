@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'DESandMD5demo' target in the 'DESandMD5demo' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
