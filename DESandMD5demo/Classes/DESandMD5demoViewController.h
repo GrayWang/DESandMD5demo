@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DESandMD5demoViewController : UIViewController {
-
+@interface DESandMD5demoViewController : UIViewController 
+{
 }
 
 @end
