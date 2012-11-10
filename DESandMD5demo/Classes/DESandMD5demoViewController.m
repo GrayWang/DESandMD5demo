@@ -33,6 +33,7 @@
     if (sender.selectedSegmentIndex == 0)
     {
         isMD5Mode = YES;
+        btnEncrypt.hidden = YES;
         btnDecrypt.hidden = YES;
         lblKey.hidden = YES;
         txtKey.hidden = YES;
@@ -40,6 +41,7 @@
     else
     {
         isMD5Mode = NO;
+        btnEncrypt.hidden = NO;
         btnDecrypt.hidden = NO;
         lblKey.hidden = NO;
         txtKey.hidden = NO;
